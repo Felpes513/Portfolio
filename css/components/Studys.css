@@ -1,0 +1,15 @@
+.img-description-container {
+    display: flex; /* Alinha a imagem e o texto lado a lado */
+    align-items: center; /* Centraliza verticalmente a imagem e o texto */
+    margin-bottom: 20px; /* Espaçamento inferior entre os itens da lista */
+}
+
+.imagem {
+    max-width: 150px; /* Define uma largura máxima para a imagem */
+    margin-right: 15px; /* Espaço entre a imagem e o texto */
+}
+
+.description {
+    flex: 1; /* Permite que o texto ocupe o espaço restante ao lado da imagem */
+    font-size: 16px; /* Tamanho da fonte do texto */
+}
