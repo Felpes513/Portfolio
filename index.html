@@ -18,30 +18,65 @@
     />
 </head>
 <body>
-    <!--Navbar-->
+    <!-- Navbar -->
     <nav class="navbar">
-        <div class="navbar__content max-width mb-0">
-        <ul class="navbar__links">
-            <li><a href="#header">Início</a></li>
-            <li><a href="#about">Sobre</a></li>
-            <li><a href="#Studys">Escolaridade</a></li>
-            <li><a href="#skills">Habilidades</a></li>
-            <li><a href="#projects">Projetos</a></li>
-            <li><a href="#footer">Contatos</a></li>
+      <!-- Logo -->
+      <div class="navbar__logo">
+        <img src="assets/logo.png" alt="Logo do Portfólio">
+      </div>
+        <ul class="navbar__links" aria-label="Menu principal">
+          <li>
+            <a href="#header">
+              <img src="assets/Início.png" alt="Início">
+              <span>Início</span>
+            </a>
+          </li>
+          <li>
+            <a href="#about">
+              <img src="assets/Sobre.png" alt="Sobre">
+              <span>Sobre</span>
+            </a>
+          </li>
+          <li>
+            <a href="#Studys">
+              <img src="assets/Escolaridade.png" alt="Escolaridade">
+              <span>Escolaridade</span>
+            </a>
+          </li>
+          <li>
+            <a href="#skills">
+              <img src="assets/habilidades.png" alt="Habilidades">
+              <span>Habilidades</span>
+            </a>
+          </li>
+          <li>
+            <a href="#projects">
+              <img src="assets/Trabalhos.png" alt="Projetos">
+              <span>Projetos</span>
+            </a>
+          </li>
+          <li>
+            <a href="#footer">
+              <img src="assets/Contatos.png" alt="Contatos">
+              <span>Contatos</span>
+            </a>
+          </li>
         </ul>
-        <div class="navbar__mobile">
-            <img src="assets/menu.png" alt="menu" class="burguer" />
-            <ul class="mobile__links">
-              <li><a href="#header">Início</a></li>
-              <li><a href="#about">Sobre</a></li>
-              <li><a href="#Studys">Escolaridade</a></li>
-              <li><a href="#skills">Habilidades</a></li>
-              <li><a href="#projects">Projetos</a></li>
-              <li><a href="#footer">Contato</a></li>
-            </ul>
-          </div>
-        </div>
+      </nav>
+
+      <!-- Menu Mobile -->
+      <div class="navbar__mobile">
+        <ul class="mobile__links">
+          <li><a href="#header">Início</a></li>
+          <li><a href="#about">Sobre</a></li>
+          <li><a href="#Studys">Escolaridade</a></li>
+          <li><a href="#skills">Habilidades</a></li>
+          <li><a href="#projects">Projetos</a></li>
+          <li><a href="#footer">Contato</a></li>
+        </ul>
+      </div>      
     </nav>
+  </body>  
     <!--header-->
     <header id="header" class="max-width">
         <div class="header__left">
@@ -112,16 +147,6 @@
             <ul>
                 <li class="skills__item">
                     <div class="img-container">
-                        <img src="assets/notebook.png" alt="Gestão de Banco de Dados e Nuvem">
-                    </div>
-                    <h3>Gestão de Banco de Dados e Nuvem</h3>
-                    <p>
-                        Desenvolvimento Back-End com foco em tecnologias
-                        modernas.
-                    </p>
-                </li>
-                <li class="skills__item">
-                    <div class="img-container">
                         <img src="assets/Java.png" alt="linguagem de programação">
                     </div>
                     <h3>Java</h3>
@@ -131,9 +156,9 @@
                 </li>
                 <li class="skills__item">
                     <div class="img-container">
-                        <img src="assets/AWS.jpg" alt="AWS">
+                        <img src="assets/Cloud.png" alt="Cloud">
                     </div>
-                    <h3>Amazon AWS</h3>
+                    <h3>Serviços Cloud</h3>
                     <p>
                         Habilidade em desenvolver e gerenciar infraestruturas modernas e escaláveis, 
                         com foco em soluções baseadas em nuvem.

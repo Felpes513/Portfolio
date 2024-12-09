@@ -1,111 +1,150 @@
-:root {
-  --white: #ffffff;
-  --tertiary-color: #007bff;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
+/* Estilo da Navbar */
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 80px;
+  height: 100%;
+  background: #ffffff; /* Fundo branco */
+  border-right: 1px solid #e6e6e6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+  transition: width 0.3s ease;
   z-index: 1000;
-  background-color: var(--white);
+}
+
+.navbar:hover {
+  width: 300px; /* Expande para exibir os textos */
+}
+
+.navbar__logo img {
+  width: 75px; /* Tamanho do logo */
+  margin-bottom: 2rem;
 }
 
 .navbar__links {
-  position: relative;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.navbar__links li {
+  width: 100%;
+  text-align: center;
+  margin: 0.5rem 0;
 }
 
 .navbar__links a {
-  position: relative; /* Necessário para posicionar o ::after */
-  padding: 1rem;
-  display: inline-block;
-  text-decoration: none;
-  color: inherit;
-}
-
-.navbar__links a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0; /* Alinha ao texto */
-  width: 0;
-  height: 2px; /* Altura da linha */
-  background-color: black;
-  transition: width 0.3s ease; /* Suavidade na animação */
-}
-
-.navbar__links a:hover::after {
-  width: 100%; /* Faz a linha se estender apenas pelo texto */
-}
-
-.navbar .navbar__content {
-  padding: 3rem 4rem 1rem;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: #333333;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.navbar .navbar__content .navbar__links li {
-  display: inline-block;
+.navbar__links a img {
+  width: 34px; /* Tamanho do ícone */
+  height: 34px;
+  margin-right: 1rem; /* Espaço entre ícone e texto */
 }
 
-.navbar .navbar__content .navbar__links li:not(:last-of-type) {
-  margin-right: 2rem;
+.navbar__links a span {
+  display: none; /* Texto oculto inicialmente */
 }
 
-.navbar.active {
-  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
+.navbar:hover .navbar__links a span {
+  display: inline-block; /* Exibe o texto ao expandir */
 }
 
-.navbar .navbar__content .navbar__mobile,
-.navbar .navbar__content .navbar__mobile .mobile__links {
-  display: none;
+.navbar__links a:hover {
+  background: rgba(0, 123, 255, 0.1); /* Fundo azul claro no hover */
+  color: #007bff;
 }
 
-@media only screen and (max-width: 768px) {
-  .navbar .navbar__content .navbar__links {
-    display: none;
-  }
+/* Menu Mobile */
+.navbar__mobile {
+  display: none; /* Oculto por padrão no desktop */
+}
 
-  .navbar .navbar__content .navbar__mobile {
-    display: flex;
-    align-items: center;
-  }
+.navbar__toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  .navbar .navbar__content .navbar__mobile img {
-    width: 3.6rem;
-    height: 3.6rem;
-    cursor: pointer;
-  }
+.navbar__toggle img {
+  width: 2rem;
+  height: 2rem;
+}
 
-  .navbar .navbar__content .navbar__mobile.active .mobile__links {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--white);
+.mobile__links {
+  display: none; /* Inicialmente escondido */
+  position: absolute;
+  top: 100%; /* Logo abaixo da navbar */
+  left: 0;
+  width: 100%;
+  background-color: var(--white);
+  box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 1rem 0;
+  margin: 0;
+  text-align: center;
+  z-index: 1000;
+}
+
+.mobile__links li {
+  margin: 0.5rem 0;
+}
+
+.mobile__links a {
+  text-decoration: none;
+  color: var(--black);
+  padding: 0.5rem;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.mobile__links a:hover {
+  background-color: var(--hover-color);
+  color: var(--primary-color);
+}
+
+/* Exibe o menu quando ativo */
+.navbar__mobile.active .mobile__links {
+  display: block;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+  .navbar {
+    position: fixed;
+    bottom: 0;
+    top: auto;
     width: 100%;
-    position: absolute;
-    top: 98%;
-    left: 0;
-    padding: 1rem 0;
-    box-shadow: 0 0.4rem 0.5rem rgba(0, 0, 0, 0.1);
-    z-index: 999;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-around;
   }
 
-  .navbar .navbar__content .navbar__mobile.active .mobile__links li {
-    margin-right: 0;
+  .navbar:hover {
+    width: 100%; /* Não expande em dispositivos móveis */
   }
 
-  .navbar .navbar__content .navbar__mobile.active .mobile__links li a {
-    padding: 1rem;
-    display: block;
-    text-align: center;
+  .navbar__links {
+    display: none; /* Esconde links da navbar principal */
+  }
+
+  .mobile__links a span {
+    display: none; /* Texto permanece oculto no mobile */
   }
 }
