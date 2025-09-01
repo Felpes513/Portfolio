@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <title>Portfólio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Fontes -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="layout">
+      <button
+        class="menu-toggle"
+        aria-label="Abrir/fechar menu"
+        id="btnToggleMenu"
+        aria-expanded="false"
+      >
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+
+      <!-- Sidenav -->
+      <nav class="sidenav" id="sidenav">
+        <div class="perfil">
+          <h2>Felipe Souza Moreira</h2>
+          <p>Dev Fullstack & futuro DevOps</p>
+        </div>
+
+        <a href="#inicio" class="nav-link" data-section="inicio">Início</a>
+        <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+        <a href="#certificacoes" class="nav-link" data-section="certificacoes"
+          >Certificações</a
+        >
+        <a href="#projetos" class="nav-link" data-section="projetos"
+          >Projetos</a
+        >
+        <a href="#experiencias" class="nav-link" data-section="experiencias"
+          >Experiências</a
+        >
+      </nav>
+
+      <!-- Conteúdo -->
+      <main class="conteudo">
+        <!-- Início -->
+        <section class="inicio" id="inicio">
+          <div class="container">
+            <div class="foto">
+              <img
+                src="assets/felipe.jpeg"
+                alt="Foto de Felipe"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="info">
+              <h1>Olá! 👋 Eu sou <strong>Felipe Souza Moreira</strong></h1>
+              <p>Desenvolvedor Fullstack e Devops</p>
+
+              <div class="botoes">
+                <a
+                  href="https://github.com/Felpes513"
+                  target="_blank"
+                  rel="noopener"
+                  class="github"
+                  aria-label="GitHub"
+                >
+                  <img
+                    src="assets/icons/github.png"
+                    alt="GitHub"
+                    class="icon-inline"
+                  />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/felipe-souza-moreira-45292220b/"
+                  target="_blank"
+                  rel="noopener"
+                  class="linkedin"
+                  aria-label="LinkedIn"
+                >
+                  <img
+                    src="assets/icons/linkedin.png"
+                    alt="LinkedIn"
+                    class="icon-inline"
+                  />
+                </a>
+                <a
+                  href="mailto:felipe.seuemail@exemplo.com"
+                  class="email"
+                  aria-label="Enviar email"
+                >
+                  <img
+                    src="assets/icons/gmail.png"
+                    alt="Email"
+                    class="icon-inline"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Skills -->
+        <section class="skills" id="skills">
+          <h2>Minhas Skills</h2>
+
+          <div class="categorias">
+            <div class="categoria">
+              <h3>Backend</h3>
+              <ul>
+                <li>
+                  <img src="assets/icons/java.png" class="icon-li" alt="Java" />
+                  Java
+                </li>
+                <li>
+                  <img
+                    src="assets/icons/icons8-logotipo-da-primavera-48.png"
+                    class="icon-li"
+                    alt="Spring Boot"
+                  />
+                  Spring Boot
+                </li>
+              </ul>
+            </div>
+
+            <div class="categoria">
+              <h3>Frontend</h3>
+              <ul>
+                <li>
+                  <img
+                    src="assets/icons/angular.png"
+                    class="icon-li"
+                    alt="Angular"
+                  />
+                  Angular
+                </li>
+                <li>
+                  <img
+                    src="assets/icons/html.png"
+                    class="icon-li"
+                    alt="HTML5"
+                  />
+                  HTML
+                </li>
+                <li>
+                  <img
+                    src="assets/icons/css-3.png"
+                    class="icon-li"
+                    alt="CSS3"
+                  />
+                  CSS / SCSS
+                </li>
+                <li>
+                  <img
+                    src="assets/icons/js.png"
+                    class="icon-li"
+                    alt="JavaScript"
+                  />
+                  JavaScript / TypeScript
+                </li>
+              </ul>
+            </div>
+
+            <div class="categoria">
+              <h3>DevOps / Cloud</h3>
+              <ul>
+                <li>
+                  <img
+                    src="assets/icons/docker.png"
+                    class="icon-li"
+                    alt="Docker"
+                  />
+                  Docker
+                </li>
+                <li>
+                  <img
+                    src="assets/icons/aws-svgrepo-com.png"
+                    class="icon-li"
+                  />Amazon Web Service
+                </li>
+                <li>
+                  <img src="assets/icons/github.png" class="icon-li" />GitHub
+                  Actions
+                </li>
+              </ul>
+            </div>
+
+            <div class="categoria">
+              <h3>Banco de Dados</h3>
+              <ul>
+                <li>
+                  <img
+                    src="assets/icons/mysql.png"
+                    class="icon-li"
+                    alt="MySQL"
+                  />
+                  MySQL
+                </li>
+                <li>
+                  <img src="assets/icons/MongoDB.png" class="icon-li" />MongoDB
+                </li>
+              </ul>
+            </div>
+
+            <div class="categoria">
+              <h3>Ferramentas / QA</h3>
+              <ul>
+                <li>
+                  <img
+                    src="assets/icons/insomnia-svgrepo-com.png"
+                    class="icon-li"
+                    alt="Insomnia"
+                  />
+                  Insomnia
+                </li>
+                <li>
+                  <img
+                    src="assets/icons/postman-icon-svgrepo-com.svg"
+                    class="icon-li"
+                    alt="Postman"
+                  />
+                  Postman
+                </li>
+                <li>
+                  <img
+                    src="assets/icons/document-svgrepo-com.svg"
+                    class="icon-li"
+                  />Documentações de Software
+                </li>
+                <li>
+                  <img
+                    src="assets/icons/selenium-svgrepo-com.svg"
+                    class="icon-li"
+                    alt="Selenium"
+                  />
+                  Teste Manual e Automatizado
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Certificações -->
+        <section class="certificacoes" id="certificacoes">
+          <h2>Minhas Certificações</h2>
+
+          <div class="grid">
+            <div class="certificado">
+              <img
+                src="assets/aws-certified.png"
+                alt="AWS Cloud Practitioner"
+                loading="lazy"
+              />
+              <h3>AWS Cloud Practitioner</h3>
+              <a
+                href="https://www.credly.com/badges/b4c5ead2-3f86-4a0c-8d15-792a10f5aa44/public_url"
+                target="_blank"
+                rel="noopener"
+                >Ver Certificado</a
+              >
+            </div>
+
+            <div class="certificado">
+              <img
+                src="assets/mysql-cert.png"
+                alt="MySQL Database Essentials"
+                loading="lazy"
+              />
+              <h3>MySQL Essentials</h3>
+              <a
+                href="https://www.credly.com/badges/outra-url"
+                target="_blank"
+                rel="noopener"
+                >Ver Certificado</a
+              >
+            </div>
+
+            <div class="certificado">
+              <img
+                src="assets/enterprise-design-thinking.png"
+                alt="Enterprise Design Thinking Practitioner"
+                loading="lazy"
+              />
+              <h3>Enterprise Design Thinking Practitioner</h3>
+              <a
+                href="https://www.credly.com/badges/f4b34c38-0d62-489c-9174-60115e59b692/public_url"
+                target="_blank"
+                rel="noopener"
+                >Ver Certificado</a
+              >
+            </div>
+          </div>
+        </section>
+
+        <!-- Projetos -->
+        <section class="projetos" id="projetos">
+          <h2>Projetos Desenvolvidos</h2>
+
+          <div class="cards">
+            <div class="card">
+              <h3>Sistema de Gerenciamento de Projetos (TCC)</h3>
+              <p>
+                Plataforma completa com cadastro, inscrição, geração de
+                relatórios, notificações e autenticação por perfil.
+              </p>
+              <div class="links">
+                <a
+                  href="https://github.com/Felpes513/curso-organo"
+                  target="_blank"
+                  rel="noopener"
+                  class="link-icon"
+                >
+                  <img
+                    src="assets/icons/github.png"
+                    alt="GitHub"
+                    class="icon-inline"
+                  />
+                </a>
+                <a
+                  href="https://youtube.com/seuvideo"
+                  target="_blank"
+                  rel="noopener"
+                  class="link-icon"
+                  ><img src="assets/icons/youtube.png" class="icon-inline"
+                /></a>
+                <a
+                  href="https://seusite.com/doc"
+                  target="_blank"
+                  rel="noopener"
+                  class="link-icon"
+                  ><img
+                    src="assets/icons/document-svgrepo-com.svg"
+                    class="icon-inline"
+                /></a>
+              </div>
+            </div>
+
+            <div class="card">
+              <h3>Sistema de Controle de Vendas</h3>
+              <p>
+                Aplicação fullstack com Spring Boot + Angular para controle de
+                produtos, vendas e relatórios.
+              </p>
+              <div class="links">
+                <a
+                  href="https://github.com/Felpes513/Novo_Mercado"
+                  target="_blank"
+                  rel="noopener"
+                  class="link-icon"
+                >
+                  <img
+                    src="assets/icons/github.png"
+                    alt="GitHub"
+                    class="icon-inline"
+                  />
+                </a>
+                <a
+                  href="https://youtube.com/outrovideo"
+                  target="_blank"
+                  rel="noopener"
+                  class="link-icon"
+                  ><img src="assets/icons/youtube.png" class="icon-inline"
+                /></a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Experiências -->
+        <section class="experiencias" id="experiencias">
+          <h2>Minhas Experiências</h2>
+
+          <div class="timeline">
+            <div class="item">
+              <h3>
+                Auxiliar de Q.A - MobileMed Soluções em Tecnologia para Medicina
+              </h3>
+              <span>Fev 2025 - Até o momento</span>
+              <p>
+                Trabalhando na área de Qualidade de software, contribuindo para
+                a entrega de softwares mais confiáveis ​​e com valor agregado.
+                Minhas principais responsabilidades incluem: Realizar testes de
+                caixa branca, com base na análise de código-fonte e lógica de
+                programação; Criar documentação técnica utilizando o conceito de
+                histórias de usuário, tornando os requisitos mais claros e
+                focados no cliente; Apoiar a definição de cenários de teste e
+                especificações de testes funcionais; Testes de caixa preta, com
+                foco na validação de funcionalidades de acordo com as
+                especificações. Estou continuamente desenvolvendo minhas
+                habilidades em melhores práticas de Garantia da Qualidade,
+                testes automatizados e ferramentas que garantem qualidade e
+                eficiência nos processos de desenvolvimento.
+              </p>
+            </div>
+
+            <div class="item">
+              <h3>Office-boy - ICR Escritório Contábil e Fiscal LTDA</h3>
+              <span>Jan 2021 - Jan 2025</span>
+              <p>
+                Responsável por dar suporte às atividades administrativas e
+                operacionais da empresa, realizando tarefas externas e internas,
+                como entrega e coleta de documentos, pagamentos bancários,
+                distribuição de correspondências, organização de materiais e
+                suporte logístico para diversos departamentos. Focado em
+                garantir eficiência e pontualidade nas operações de suporte,
+                além de contribuir para a organização e o bom andamento dos
+                processos diários.
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
