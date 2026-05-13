@@ -63,6 +63,84 @@ const observer = new IntersectionObserver(
 
 sections.forEach(sec => observer.observe(sec));
 
+// ===== certificações em accordion =====
+const certificados = $$('.certificacoes .certificado');
+certificados.forEach(certificado => {
+  certificado.addEventListener('toggle', () => {
+    if (!certificado.open) return;
+
+    certificados.forEach(outroCertificado => {
+      if (outroCertificado !== certificado) {
+        outroCertificado.open = false;
+      }
+    });
+  });
+});
+
+// ===== carrosséis =====
+function iniciarCarrosseis(ctx = document) {
+  const carrosseis = $$('[data-carousel]', ctx);
+  carrosseis.forEach(carrossel => {
+    const slides = $$('.carousel-slide', carrossel);
+    const contador = $('[data-carousel-counter]', carrossel);
+    const btnAnterior = $('[data-carousel-prev]', carrossel);
+    const btnProximo = $('[data-carousel-next]', carrossel);
+    let slideAtual = 0;
+
+    function mostrarSlide(indice) {
+      slideAtual = (indice + slides.length) % slides.length;
+
+      slides.forEach((slide, slideIndice) => {
+        slide.classList.toggle('active', slideIndice === slideAtual);
+      });
+
+      if (contador) {
+        contador.textContent = `${slideAtual + 1} / ${slides.length}`;
+      }
+    }
+
+    btnAnterior?.addEventListener('click', () => mostrarSlide(slideAtual - 1));
+    btnProximo?.addEventListener('click', () => mostrarSlide(slideAtual + 1));
+    mostrarSlide(0);
+  });
+}
+
+iniciarCarrosseis();
+
+// ===== modal de projetos =====
+const projetoModal = $('#projetoModal');
+const modalConteudo = $('[data-modal-content]', projetoModal);
+const btnFecharModal = $('[data-modal-close]', projetoModal);
+const botoesProjeto = $$('[data-modal-target]');
+
+function fecharProjetoModal() {
+  if (!projetoModal?.open) return;
+  projetoModal.close();
+}
+
+botoesProjeto.forEach(botao => {
+  botao.addEventListener('click', () => {
+    const template = document.getElementById(botao.dataset.modalTarget);
+    if (!template || !projetoModal || !modalConteudo) return;
+
+    modalConteudo.replaceChildren(template.content.cloneNode(true));
+    projetoModal.showModal();
+    document.body.classList.add('modal-aberto');
+    iniciarCarrosseis(modalConteudo);
+  });
+});
+
+btnFecharModal?.addEventListener('click', fecharProjetoModal);
+projetoModal?.addEventListener('close', () => {
+  document.body.classList.remove('modal-aberto');
+  modalConteudo?.replaceChildren();
+});
+projetoModal?.addEventListener('click', event => {
+  if (event.target === projetoModal) {
+    fecharProjetoModal();
+  }
+});
+
 const BREAKPOINT = 768;
 
 function aplicarResponsivo() {
