@@ -115,6 +115,10 @@ section {
   color: #444;
   margin-bottom: 1.5rem;
 }
+.inicio .info .sobre-resumo {
+  max-width: 760px;
+  line-height: 1.6;
+}
 .inicio .info .contato-chamada {
   margin-bottom: 0.7rem;
   color: var(--azul);
