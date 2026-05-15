@@ -303,11 +303,12 @@ section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-  align-items: start;
+  align-items: stretch;
 }
 .projetos .card {
   display: flex;
   flex-direction: column;
+  height: 100%;
   background: #fff;
   border-radius: 10px;
   padding: 0;
@@ -317,6 +318,7 @@ section {
 .projetos .projeto-preview {
   display: flex;
   width: 100%;
+  height: 100%;
   min-height: 100%;
   padding: 1.5rem;
   flex-direction: column;
@@ -362,6 +364,16 @@ section {
   height: min(70%, 160px);
   object-fit: contain;
   object-position: center;
+}
+.projeto-logo-corpo-esporte {
+  padding: 0;
+  background: #050505;
+}
+.projeto-logo-corpo-esporte img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 38%;
 }
 .projeto-imagem-placeholder {
   display: flex;
@@ -418,6 +430,7 @@ section {
 }
 .projeto-detalhes .links {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
   padding-top: 1rem;
 }
@@ -428,6 +441,21 @@ section {
 }
 .projeto-detalhes .links a:hover {
   transform: scale(1.2);
+}
+.projeto-detalhes .links .link-site {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 0.9rem;
+  border: 1px solid rgba(25, 118, 210, 0.22);
+  border-radius: 8px;
+  background: #f8fbff;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+.projeto-detalhes .links .link-site:hover {
+  transform: translateY(-1px);
 }
 .projetos .card .links {
   display: flex;
@@ -483,6 +511,9 @@ section {
   display: block;
   object-fit: contain;
   background: #fff;
+}
+.carousel-slide img.carousel-img-dark {
+  background: #050505;
 }
 .carousel-slide figcaption {
   padding: 0.75rem 1rem;

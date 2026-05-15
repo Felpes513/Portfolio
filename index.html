@@ -391,6 +391,144 @@
               <button
                 type="button"
                 class="projeto-preview"
+                data-modal-target="modal-corpo-esporte"
+              >
+                <div class="projeto-imagem projeto-logo projeto-logo-corpo-esporte">
+                  <img
+                    src="assets/projects/corpo-esporte/logo.png"
+                    alt="Logo da Academia Corpo Esporte"
+                    loading="lazy"
+                  />
+                </div>
+                <h3>Academia Corpo Esporte - Landing Page</h3>
+                <p>
+                  Landing page responsiva para apresentar a academia, reforçar a
+                  identidade visual e direcionar visitantes para contato.
+                </p>
+                <span class="projeto-acao">Clique para ver detalhes</span>
+              </button>
+
+              <template id="modal-corpo-esporte">
+                <div class="projeto-detalhes">
+                  <div class="projeto-modal-header">
+                    <div class="projeto-imagem projeto-logo projeto-logo-corpo-esporte">
+                      <img
+                        src="assets/projects/corpo-esporte/logo.png"
+                        alt="Logo da Academia Corpo Esporte"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div>
+                      <h3>Academia Corpo Esporte - Landing Page</h3>
+                      <p>
+                        Landing page responsiva criada para destacar a marca,
+                        apresentar a proposta da academia e facilitar o contato
+                        com novos alunos.
+                      </p>
+                    </div>
+                  </div>
+
+                  <p>
+                    A página foi desenvolvida com foco em uma experiência direta
+                    e moderna, valorizando a identidade visual da Academia Corpo
+                    Esporte e organizando as informações principais para
+                    conversão. A estrutura já está preparada para receber um
+                    carrossel com fotos reais da academia, permitindo mostrar
+                    ambientes, treinos e diferenciais do espaço.
+                  </p>
+
+                  <div class="projeto-carousel" data-carousel>
+                    <div class="carousel-header">
+                      <h4>Imagens do projeto</h4>
+                      <span data-carousel-counter>1 / 6</span>
+                    </div>
+                    <div class="carousel-viewport">
+                      <figure class="carousel-slide active">
+                        <img
+                          src="assets/projects/corpo-esporte/hero.jpeg"
+                          alt="Hero da landing page da Academia Corpo Esporte"
+                          class="carousel-img-dark"
+                          loading="lazy"
+                        />
+                        <figcaption>Hero</figcaption>
+                      </figure>
+                      <figure class="carousel-slide">
+                        <img
+                          src="assets/projects/corpo-esporte/avaliacoes.jpeg"
+                          alt="Seção de avaliações da Academia Corpo Esporte"
+                          class="carousel-img-dark"
+                          loading="lazy"
+                        />
+                        <figcaption>Avaliações</figcaption>
+                      </figure>
+                      <figure class="carousel-slide">
+                        <img
+                          src="assets/projects/corpo-esporte/atividades.jpeg"
+                          alt="Seção de atividades da Academia Corpo Esporte"
+                          loading="lazy"
+                        />
+                        <figcaption>Atividades</figcaption>
+                      </figure>
+                      <figure class="carousel-slide">
+                        <img
+                          src="assets/projects/corpo-esporte/planos.jpeg"
+                          alt="Seção de planos da Academia Corpo Esporte"
+                          loading="lazy"
+                        />
+                        <figcaption>Planos</figcaption>
+                      </figure>
+                      <figure class="carousel-slide">
+                        <img
+                          src="assets/projects/corpo-esporte/localizacao.jpeg"
+                          alt="Seção de horários e localização da Academia Corpo Esporte"
+                          class="carousel-img-dark"
+                          loading="lazy"
+                        />
+                        <figcaption>Horários e localização</figcaption>
+                      </figure>
+                      <figure class="carousel-slide">
+                        <img
+                          src="assets/projects/corpo-esporte/footer.jpeg"
+                          alt="Rodapé da landing page da Academia Corpo Esporte"
+                          class="carousel-img-dark"
+                          loading="lazy"
+                        />
+                        <figcaption>Contato</figcaption>
+                      </figure>
+                    </div>
+                    <div class="carousel-controls">
+                      <button type="button" data-carousel-prev aria-label="Imagem anterior">
+                        <span class="material-icons" aria-hidden="true">chevron_left</span>
+                      </button>
+                      <button type="button" data-carousel-next aria-label="Próxima imagem">
+                        <span class="material-icons" aria-hidden="true">chevron_right</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="links">
+                    <a
+                      href="https://landing-page-corpo-esporte.vercel.app"
+                      target="_blank"
+                      rel="noopener"
+                      class="link-site"
+                      >
+                      <span>Acesso ao site</span>
+                      <img
+                        src="assets/icons/internet.png"
+                        alt="Landing page da Academia Corpo Esporte"
+                        class="icon-inline"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </template>
+            </article>
+
+            <article class="card projeto-card">
+              <button
+                type="button"
+                class="projeto-preview"
                 data-modal-target="modal-sgpic"
               >
                 <div class="projeto-imagem projeto-logo">
@@ -436,8 +574,9 @@
                     href="https://github.com/Felpes513/curso-organo"
                     target="_blank"
                     rel="noopener"
-                    class="link-icon"
+                    class="link-site"
                   >
+                    <span>Acesso ao repositório</span>
                     <img
                       src="assets/icons/github.png"
                       alt="GitHub"
@@ -448,12 +587,15 @@
                     href="https://ic.inovauscs.tech"
                     target="_blank"
                     rel="noopener"
-                    class="link-icon"
-                    ><img
+                    class="link-site"
+                    >
+                    <span>Acesso ao site</span>
+                    <img
                       src="assets/icons/internet.png"
                       alt="Sistema SGPIC"
                       class="icon-inline"
-                  /></a>
+                    />
+                  </a>
                 </div>
                 </div>
               </template>
@@ -634,12 +776,15 @@
                     href="https://kepchat.kepel.com.br"
                     target="_blank"
                     rel="noopener"
-                    class="link-icon"
-                    ><img
+                    class="link-site"
+                    >
+                    <span>Acesso ao site</span>
+                    <img
                       src="assets/icons/internet.png"
                       alt="Site do KepChat"
                       class="icon-inline"
-                  /></a>
+                    />
+                  </a>
                 </div>
                 </div>
               </template>
